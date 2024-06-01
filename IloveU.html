@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>I Love you</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            block-size: 100vh;
+            margin: 0;
+            background: #2c3e50;
+        }
+
+        .box {
+            inline-size: 300px;
+            position: absolute;
+            inset-block-start: 50%;
+            inset-inline-start: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .heart {
+            position: relative;
+            margin: auto;
+            block-size: 170px;
+            inline-size: 200px;
+            animation: animate 1s infinite;
+        }
+
+        .heart:before, .heart:after {
+            content: '';
+            position: absolute;
+            background: #d63031;
+            inline-size: 100px;
+            block-size: 160px;
+            border-start-start-radius: 50px;
+            border-start-end-radius: 50px;
+        }
+
+        .heart:before {
+            inset-inline-start: 100px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+                        0 10px 10px rgba(0,0,0,0.22);
+        }
+
+        .heart:after {
+            inset-inline-start: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        a.link {
+            position: absolute;
+            inset-block-start: 0;
+            inset-inline-start: 0;
+            inline-size: 100%;
+            block-size: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            z-index: 1;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: scale(1);
+            }
+            30% {
+                transform: scale(.8);
+            }
+            60% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="heart">
+            <a href="https://youtu.be/Df45TxdJpSc?si=BAm8DUHw1f_INGfh" class="link"></a>      
+        </div>
+    </div>
+</body>
+</html>
